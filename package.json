@@ -1,0 +1,19 @@
+{
+  "name": "webpack-4",
+  "version": "1.0.0",
+  "description": "aprendiendo webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Blanca Garduno",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
