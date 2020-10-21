@@ -1,4 +1,9 @@
 Notas
 
-en esta sección se simula una aplicación de multiples paginas(html) y entradas de archivos(js)
+Los loader sirven para importar otro tipo de archivos y utilizarlos como modulos
 
+Loader para css
+npm install --save-dev --save-exact css-loader
+
+Sirve para interpretar codigo css
+npm install --save-dev --save-exact style-loader

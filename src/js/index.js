@@ -1,1 +1,3 @@
-console.log('Hola mundo Home')
+import '../css/index.css'
+
+document.body.innerHTML = 'Hola mundo'
