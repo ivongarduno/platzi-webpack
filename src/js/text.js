@@ -1,5 +1,5 @@
 function text() {
-  document.body.innerHTML = "<p>Si vez este texto eres genial</p>";
+  document.body.innerHTML = "<p>Si vez este cambio sin que se recargue el navegador eres genial</p>";
 }
 
 export default text

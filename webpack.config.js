@@ -17,6 +17,8 @@ module.exports = {
   },
   devServer: {
     hot: true,
+    open: true,
+    port: 9000,
   },
   module: {
     rules: [
@@ -26,6 +28,7 @@ module.exports = {
           {
             loader: MiniCSSExtractPlugin.loader,
           },
+          "style-loader",
           "css-loader",
         ],
       },
@@ -34,10 +37,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: "Dev server",
-    }),
-    new MiniCSSExtractPlugin({
-      filename: "css/[name].css",
+      title: "hot-module-replace",
     }),
   ],
 };
