@@ -22,3 +22,5 @@ Remplazamos el comando webpack por un CLI:   webpack-dev-server
 tampoco es necesario utilizar la bandera -w ya que se realiza en automatico al usar el dev-server
 
 "build:dev": "webpack-dev-server --config ./webpack.config.js"
+
+cuando utilizamos dev-server no se crean los archivos bundle en la carpeta dist como lo veíamos con las configuraciones anteriores
