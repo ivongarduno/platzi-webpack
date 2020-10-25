@@ -1,12 +1,21 @@
 Notas
 
-Los loader sirven para importar otro tipo de archivos y utilizarlos como modulos
+Plugins: extiende los poderes de los loaders para poder modificar y manipular los archivos
 
-Loader para interpretar imports de modulos CSS
-npm install --save-dev --save-exact css-loader
+Anteriormente todo era trabajado con un archivo js que podía inyectar css en el código html
 
-Sirve para inyectar el CSS en el HTML
-npm install --save-dev --save-exact style-loader
+npm install mini-css-extract-plugin html-webpack-plugin --save-dev --save-exact
 
-Para ejecutar la tarea:
-"build:css": "webpack --config ./webpack.config.js"
+Ya no necesitamos "style-loader", (inyecta css del js al html)
+
+Ahora hacemos uso de un plugin que obtendrá un archivo css minificado que se usara en el html:
+
+importar un plugin como objeto:
+{
+loader: MiniCSSExtractPlugin.loader,
+}
+
+este plugin me va a generar un html dentro de dist al que le importe los bundles automaticamente
+new HtmlWebpackPlugin({
+title:'Plugins'
+}),

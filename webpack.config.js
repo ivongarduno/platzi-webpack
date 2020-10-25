@@ -1,5 +1,9 @@
 //permite trabajar con rutas sin importar window linux
 const path = require("path");
+//plugins
+//MiniCSSExtractPlugin es una clase que hay que instancear con new
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -14,8 +18,21 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [
+          {
+            loader: MiniCSSExtractPlugin.loader,
+          },
+          "css-loader",
+        ],
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title:'Plugins'
+    }),
+    new MiniCSSExtractPlugin({
+      filename: "css/[name].css",
+    }),
+  ],
 };
