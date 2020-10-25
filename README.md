@@ -1,21 +1,24 @@
 Notas
 
-Plugins: extiende los poderes de los loaders para poder modificar y manipular los archivos
+ACTUALIZAR BUILD COMPILADO
+Creación de una tarea que compile los bundle cada que hay un cambio
 
-Anteriormente todo era trabajado con un archivo js que podía inyectar css en el código html
+"build:dev":"webpack --config ./webpack.config.js --watch"
 
-npm install mini-css-extract-plugin html-webpack-plugin --save-dev --save-exact
+"build:dev":"webpack --config ./webpack.config.js -w"
 
-Ya no necesitamos "style-loader", (inyecta css del js al html)
+o al ejecutar el script agregamos la bandera
 
-Ahora hacemos uso de un plugin que obtendrá un archivo css minificado que se usara en el html:
+npm run build:dev -- -w
 
-importar un plugin como objeto:
-{
-loader: MiniCSSExtractPlugin.loader,
-}
+WEBPACK DEV SERVER
 
-este plugin me va a generar un html dentro de dist al que le importe los bundles automaticamente
-new HtmlWebpackPlugin({
-title:'Plugins'
-}),
+Para recargar el navegador cada que hay un cambio y utilizar un servidor en localhost:8080
+
+npm install -D --save-exact webpack-dev-server
+
+Remplazamos el comando webpack por un CLI:   webpack-dev-server
+
+tampoco es necesario utilizar la bandera -w ya que se realiza en automatico al usar el dev-server
+
+"build:dev": "webpack-dev-server --config ./webpack.config.js"
