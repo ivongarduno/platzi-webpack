@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title:'Plugins'
+      title:'Dev server'
     }),
     new MiniCSSExtractPlugin({
       filename: "css/[name].css",
