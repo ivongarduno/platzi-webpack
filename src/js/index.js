@@ -1,3 +1,3 @@
-import '../css/index.css'
+import text from "./text";
 
-document.body.innerHTML = 'Hola mundo'
+text();
