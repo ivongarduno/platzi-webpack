@@ -15,11 +15,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "js/[name].js",
   },
-  // devServer: {
-  //   hot: true,
-  //   open: true,
-  //   port: 9000,
-  // },
+  devServer: {
+    hot: true,
+    open: true,
+    port: 9000,
+  },
   module: {
     rules: [
       {

@@ -1,13 +1,11 @@
 import "../css/index.css";
-import text from "./text";
+import search from "./search.js";
+import render from "./render.js";
 
-text();
+const id = prompt("quien es pokemon");
 
-//Para evitar que se recargue todo el navegador
-//esto no hay que hacerlo con react y vue, lo hacen por defecto
-if(module.hot){
-    module.hot.accept('./text.js',function(){
-        console.log('he recargado en caliente')
-        text()
-    })
-}
+search(id)
+  .then((data) => {
+    render(data);
+  })
+  .catch(() => console.log("no hubo pokemon con ese id"));
