@@ -23,11 +23,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        use: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
         use: [
-          {
-            loader: MiniCSSExtractPlugin.loader,
-          },
           "style-loader",
           "css-loader",
         ],
@@ -37,7 +39,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: "hot-module-replace",
+      title: "babel",
     }),
   ],
 };
